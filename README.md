@@ -52,7 +52,7 @@ cd aws-iot-heater
 
 mos flash aws-esp8266                           # Install Mongoose OS
 DEVICE_ID=$(mos config-get device.id)           # Get device ID
-mos put fs/init.js                                 # Copy init.js on the device
+mos put fs/init.js                              # Copy init.js on the device
 mos config-set mqtt.enable=true                 # Enable MQTT
 mos wifi WIFI_SSID WIFI_PASSWORD                # Setup WiFi
 mos aws-iot-setup --aws-iot-policy=mos-default  # Provision on AWS IoT
